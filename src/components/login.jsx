@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -15,6 +17,8 @@ const Login = () => {
       const response = await axios.post('http://localhost:5000/api/login', { email, password });
       console.log(response.data);
       setSuccess(response.data.message);
+      // Redirect to dashboard after successful login
+      navigate('/dashboard');
     } catch (err) {
       console.error(err.response.data);
       setError(err.response.data.message || 'Something went wrong.');
