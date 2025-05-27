@@ -8,8 +8,8 @@ const Dashboard = () => {
         <h2 className="text-2xl font-bold mb-6">Admin Dashboard</h2>
         <nav>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">Students</a></li>
-            <li><a href="#" className="hover:underline">Teachers</a></li>
+          <li><a href="/students" className="hover:underline">Students</a></li>
+          <li><a href="#" className="hover:underline">Teachers</a></li>
             <li><a href="#" className="hover:underline">Courses</a></li>
             <li><a href="#" className="hover:underline">Attendance</a></li>
             <li><a href="#" className="hover:underline">Exams</a></li>
