@@ -4,6 +4,8 @@ import React from 'react';
 import Dashboard from './components/dashboard';
 import Login from './components/login';
 import Students from './components/students';
+import Teachers  from './components/teachers';
+
 function App() {
   return (
     <Router>
@@ -11,6 +13,7 @@ function App() {
       <Route path="/" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/students" element={<Students />} />
+      <Route path="/teachers" element={<Teachers />} />
       </Routes>
   </Router>    
   );
