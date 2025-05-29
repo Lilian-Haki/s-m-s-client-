@@ -1,6 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Clear token and user data from localStorage or sessionStorage
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+
+    // Redirect to login page
+    navigate('/');
+  };
+
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
@@ -9,11 +21,11 @@ const Dashboard = () => {
         <nav>
           <ul className="space-y-2">
           <li><a href="/students" className="hover:underline">Students</a></li>
-          <li><a href="#" className="hover:underline">Teachers</a></li>
-            <li><a href="#" className="hover:underline">Courses</a></li>
-            <li><a href="#" className="hover:underline">Attendance</a></li>
-            <li><a href="#" className="hover:underline">Exams</a></li>
-            <li><a href="#" className="hover:underline">Logout</a></li>
+          <li><a href="/teachers" className="hover:underline">Teachers</a></li>
+            <li><a href="/courses" className="hover:underline">Courses</a></li>
+            <li><a href="/attendanceList" className="hover:underline">Attendance</a></li>
+            <li><a href="/exams" className="hover:underline">Exams</a></li>
+            <li><a className="py-2 hover:bg-gray-700 cursor-pointer" onClick={handleLogout}>Logout</a></li>
           </ul>
         </nav>
       </aside>
