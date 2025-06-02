@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Sidebar from '../sidebar'; 
 
 const Students = () => {
   const [students, setStudents] = useState([]);
@@ -41,9 +42,10 @@ const Students = () => {
   };
 
   return (
+  <div className="flex">
+  <Sidebar/> 
     <div className="p-8">
       <h1 className="text-2xl font-bold mb-4">Manage Students</h1>
-
       <form onSubmit={handleSubmit} className="mb-6 space-x-2">
         <input
           type="text"
@@ -87,6 +89,7 @@ const Students = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

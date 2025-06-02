@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Dashboard from './components/dashboard';
 import Login from './components/login';
+import Sidebar from './components/sidebar';
 import Students from './components/students/students';
 import Teachers from './components/teachers/teachers';
 import ExamsList from './components/exams/examList';
@@ -18,7 +19,9 @@ function App() {
     <Router>
     <Routes>
       <Route path="/" element={<Login />} />
+
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/sidebar" element={<Sidebar />} />
       <Route path="/students" element={<Students />} />
       <Route path="/teachers" element={<Teachers />} />
       <Route path="/exams" element={<ExamsList />} />

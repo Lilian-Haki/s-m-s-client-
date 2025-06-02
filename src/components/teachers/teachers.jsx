@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Sidebar from '../sidebar';
 
 const Teachers = () => {
   const [teachers, setTeachers] = useState([]);
@@ -45,6 +46,8 @@ const Teachers = () => {
   };
 
   return (
+  <div className="flex">
+  <Sidebar/> 
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Teachers</h1>
       <input
@@ -123,6 +126,7 @@ const Teachers = () => {
         </tbody>
       </table>
     </div>
+  </div>
   );
 };
 
