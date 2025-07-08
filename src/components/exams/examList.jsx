@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from './../../api';
+//import Sidebar from '../sidebar';
 
 const ExamsList = () => {
   const [exams, setExams] = useState([]);
@@ -17,6 +18,8 @@ const ExamsList = () => {
   };
 
   return (
+    // <div className="flex">
+    //   <Sidebar />
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Exams</h1>
       <Link to="/exams/add" className="bg-blue-500 text-white p-2 rounded">Add Exam</Link>
@@ -44,6 +47,7 @@ const ExamsList = () => {
         </tbody>
       </table>
     </div>
+    //</div>
   );
 };
 

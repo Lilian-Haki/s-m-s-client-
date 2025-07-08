@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import api from './../../api';
+//import Sidebar from '../sidebar';
 
 const CourseForm = () => {
   const { id } = useParams();
@@ -28,6 +29,8 @@ const CourseForm = () => {
   };
 
   return (
+    // <div className="flex">
+    //   <Sidebar />
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">{id ? 'Edit' : 'Add'} Course</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -36,6 +39,7 @@ const CourseForm = () => {
         <button type="submit" className="bg-blue-500 text-white p-2 rounded">{id ? 'Update' : 'Create'}</button>
       </form>
     </div>
+    //</div>
   );
 };
 

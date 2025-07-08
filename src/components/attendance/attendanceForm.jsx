@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios'; 
+//import Sidebar from '../sidebar';
 
 const AttendanceForm = () => {
   const { id } = useParams();
@@ -39,6 +40,8 @@ const AttendanceForm = () => {
   };
 
   return (
+    // <div className="flex">
+    //   <Sidebar />
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">{id ? 'Edit' : 'Mark'} Attendance</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -62,6 +65,7 @@ const AttendanceForm = () => {
         <button type="submit" className="bg-blue-500 text-white p-2 rounded">{id ? 'Update' : 'Mark'} Attendance</button>
       </form>
     </div>
+    //</div>
   );
 };
 

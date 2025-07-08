@@ -13,13 +13,14 @@ import AttendanceForm from './components/attendance/attendanceForm';
 import CoursesTable from './components/courses/coursesTable';
 import CourseForm from './components/courses/coursesForm';
 import CourseProfile from './components/courses/courseProfile';
+import Register from './components/register';
 
 function App() {
   return (
     <Router>
     <Routes>
       <Route path="/" element={<Login />} />
-
+      <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/sidebar" element={<Sidebar />} />
       <Route path="/students" element={<Students />} />

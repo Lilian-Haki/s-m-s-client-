@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import { Link } from 'react-router-dom';
+//import Sidebar from '../sidebar';
 
 const AttendanceList = () => {
   const [attendance, setAttendance] = useState([]);
@@ -16,6 +17,8 @@ const AttendanceList = () => {
   };
 
   return (
+    // <div className="flex">
+    //   <Sidebar />
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Attendance Records</h1>
       <Link to="/attendance/add" className="bg-blue-500 text-white p-2 rounded">Mark Attendance</Link>
@@ -45,6 +48,7 @@ const AttendanceList = () => {
         </tbody>
       </table>
     </div>
+    //</div>
   );
 };
 
