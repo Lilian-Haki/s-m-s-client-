@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        limeGreen: "#b1ec9a",
+        limegreen: "#b1ec9a",
         aliceblue:"aliceblue",
         primary: "#2E3A59", // Add your custom primary color
         button: "4CAF50  ", // Add your custom secondary color

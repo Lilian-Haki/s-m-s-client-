@@ -19,11 +19,11 @@ const Sidebar = () => {
     <div className="flex min-h-screen">
       {/* Sidebar */}
       <aside className="w-64 bg-primary text-white p-4">
-        <h2 className="text-2xl font-bold mb-6"><DashboardOutlined />Dashboard</h2>
-        <nav className='align-items-center text-5xl '>
+        <a href='/dashboard' className="text-2xl font-bold pb-[100px]"><DashboardOutlined />Dashboard</a>
+        <nav className='mt-8 align-items-center text-5xl '>
           <ul className="space-y-4 font-[24px]">
             <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
-              <a href="/students" className="font-[44px] font-roboto "><UserOutlined style={{padding:'10px'}} />Students</a>
+              <a href="/newstudents" className="font-[44px] font-roboto "><UserOutlined style={{padding:'10px'}} />Students</a>
             </li>
             <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
               <a href="/teachers" className=""><UserOutlined style={{padding:'10px'}}/>Teachers</a></li>

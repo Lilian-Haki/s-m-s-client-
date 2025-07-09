@@ -4,7 +4,7 @@ import React from 'react';
 import Dashboard from './components/dashboard';
 import Login from './components/login';
 import Sidebar from './components/sidebar';
-import Students from './components/students/students';
+import NewStudents from './components/students/addstudents';
 import Teachers from './components/teachers/teachers';
 import ExamsList from './components/exams/examList';
 import ExamForm from './components/exams/examForm';
@@ -23,7 +23,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/sidebar" element={<Sidebar />} />
-      <Route path="/students" element={<Students />} />
+      <Route path="/newstudents" element={<NewStudents />} />
       <Route path="/teachers" element={<Teachers />} />
       <Route path="/exams" element={<ExamsList />} />
       <Route path="/exams/add" element={<ExamForm />} />
