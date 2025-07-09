@@ -1,36 +1,42 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { DashboardOutlined,UserOutlined, ContainerOutlined, CarryOutOutlined, BookOutlined,DollarOutlined,LogoutOutlined } from '@ant-design/icons';
 
 const Sidebar = () => {
-  // const navigate = useNavigate();
+  
+  const navigate = useNavigate();
 
-  // const handleLogout = () => {
-  //   // Clear token and user data from localStorage or sessionStorage
-  //   localStorage.removeItem('token');
-  //   localStorage.removeItem('user');
+   const handleLogout = () => {
+     // Clear token and user data from localStorage or sessionStorage
+     localStorage.removeItem('token');
+     localStorage.removeItem('user');
 
-  //   // Redirect to login page
-  //   navigate('/');
-  // };
+     // Redirect to login page
+     navigate('/');
+   };
 
   return (
-    <div className="flex">
+    <div className="flex min-h-screen">
       {/* Sidebar */}
-      <aside className="w-64 bg-blue-900 text-white p-4">
-        <h2 className="text-2xl font-bold mb-6">Admin Dashboard</h2>
-        <img src="" alt="" />
-        <nav className="mt-[100px]">
-          <div className="flex items-center mb-6">
-            <img src="/path/to/logo.png" alt="Logo" className="w-12 h-12 mr-2" />
-            <span className="text-lg font-semibold">School Management</span>
-          </div>
-          <ul className="p-10">
-            <li><a href="/students" className="hover:underline">Students</a></li>
-            <li><a href="/teachers" className="hover:underline">Teachers</a></li>
-            <li><a href="/courses" className="hover:underline">Courses</a></li>
-            <li><a href="/attendanceList" className="hover:underline">Attendance</a></li>
-            <li><a href="/exams" className="hover:underline">Exams</a></li>
-            {/* <li><a className="py-2 hover:bg-gray-700 cursor-pointer" onClick={handleLogout}>Logout</a></li> */}
+      <aside className="w-64 bg-primary text-white p-4">
+        <h2 className="text-2xl font-bold mb-6"><DashboardOutlined />Dashboard</h2>
+        <nav className='align-items-center text-5xl '>
+          <ul className="space-y-4 font-[24px]">
+            <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
+              <a href="/students" className="font-[44px] font-roboto "><UserOutlined style={{padding:'10px'}} />Students</a>
+            </li>
+            <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
+              <a href="/teachers" className=""><UserOutlined style={{padding:'10px'}}/>Teachers</a></li>
+            <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
+              <a href="/courses" className=""><ContainerOutlined style={{padding:'10px'}}/>Courses</a></li>
+            <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
+              <a href="/attendanceList" className=""><CarryOutOutlined style={{padding:'10px'}}/>Attendance</a></li>
+            <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
+              <a href="/exams" className=""><BookOutlined style={{padding:'10px'}}/>Exams</a></li>
+                        <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
+              <a href="/finances" className=""><DollarOutlined style={{padding:'10px'}}/>Finances</a></li>
+            <li className='h-[40px] w-[230px] rounded-[10px] hover:bg-slate-500 '>
+              <a className="py-2" onClick={handleLogout}><LogoutOutlined style={{padding:'10px'}}/>Logout</a></li>
           </ul>
         </nav>
       </aside>
